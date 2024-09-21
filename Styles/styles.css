@@ -405,3 +405,46 @@ nav {
         padding: 15px; /* Espacement pour chaque bouton */
     }
 }
+
+/* Hamburger icon */
+.hamburger {
+    display: none; /* Cacher par défaut */
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: auto; /* Pousse le hamburger à droite */
+    color: #bb86fc; /* Couleur pour le hamburger */
+}
+
+/* Styles pour la liste de navigation */
+#nav-list {
+    display: flex; /* Affichage en ligne par défaut */
+    margin-left: auto; /* Espace entre le hamburger et la liste */
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Afficher le bouton hamburger sur petits écrans */
+    }
+
+    #nav-list {
+        display: none; /* Cacher la liste de navigation par défaut */
+        flex-direction: column; /* Alignement vertical */
+        position: absolute; /* Positionner le menu en absolu */
+        top: 50px; /* Ajuste selon la hauteur de l'en-tête */
+        right: 0; /* Alignement à droite */
+        background-color: #000; /* Fond noir */
+        width: 250px; /* Largeur fixe pour le menu déroulant */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Ombre pour le menu */
+        padding: 10px; /* Espacement intérieur */
+        border-radius: 5px; /* Coins arrondis */
+    }
+
+    #nav-list.show {
+        display: flex; /* Afficher la liste quand elle est active */
+    }
+
+    .nav-button {
+        padding: 15px; /* Espacement pour chaque bouton */
+        color: #ffffff; /* Couleur du texte */
+    }
+}
