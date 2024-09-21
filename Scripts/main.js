@@ -23,3 +23,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById("hamburger");
+    const navList = document.getElementById("nav-list");
+
+    hamburger.addEventListener("click", () => {
+        navList.classList.toggle("show"); // Ajoute ou enlève la classe 'show'
+    });
+});
+
+function toggleMenu() {
+    const navList = document.getElementById('nav-list');
+    navList.classList.toggle('show');
+}
