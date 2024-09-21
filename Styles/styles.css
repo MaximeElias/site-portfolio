@@ -411,7 +411,7 @@ nav {
     display: none; /* Cacher par défaut */
     font-size: 30px;
     cursor: pointer;
-    margin-left: auto; /* Pousse le hamburger à droite */
+    margin-right: 13rem; /* Pousse le hamburger à droite */
     color: #bb86fc; /* Couleur pour le hamburger */
 }
 
@@ -430,9 +430,9 @@ nav {
         display: none; /* Cacher la liste de navigation par défaut */
         flex-direction: column; /* Alignement vertical */
         position: absolute; /* Positionner le menu en absolu */
-        top: 50px; /* Ajuste selon la hauteur de l'en-tête */
+        top: 70px; /* Ajuste selon la hauteur de l'en-tête */
         right: 0; /* Alignement à droite */
-        background-color: #000; /* Fond noir */
+        background-color: black; /* Fond noir */
         width: 250px; /* Largeur fixe pour le menu déroulant */
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Ombre pour le menu */
         padding: 10px; /* Espacement intérieur */
