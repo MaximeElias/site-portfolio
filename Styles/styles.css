@@ -1,0 +1,310 @@
+/* Styles généraux */
+* {
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur/hauteur */
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Utiliser Poppins comme police principale */
+    background-color: #121212; /* Fond sombre */
+    color: #ffffff; /* Texte en blanc */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime le padding par défaut */
+}
+
+/* Styles pour l'en-tête */
+header {
+    background-color: #1e1e1e; /* Fond de l'en-tête */
+    padding: 20px; /* Espacement autour de l'en-tête */
+}
+
+.header-container {
+    display: flex; /* Utilisation de Flexbox pour le layout */
+    justify-content: space-between; /* Espacement entre le titre et la navigation */
+    align-items: center; /* Alignement vertical centré */
+}
+
+nav ul {
+    list-style-type: none; /* Enlever les puces par défaut */
+    padding: 0; /* Supprime le padding par défaut */
+    margin: 0; /* Supprime les marges par défaut */
+    display: flex; /* Afficher les éléments en ligne */
+}
+
+nav ul li {
+    margin: 0 15px; /* Espacement entre les liens */
+}
+
+nav ul li a {
+    color: #bb86fc; /* Couleur des liens */
+    text-decoration: none; /* Pas de soulignement */
+}
+
+/* Styles généraux pour les boutons de navigation */
+.nav-button {
+    display: inline-block; /* Permet d'ajouter des marges */
+    padding: 10px 20px; /* Espacement intérieur */
+    background-color: #bb86fc; /* Couleur de fond */
+    color: #ffffff; /* Couleur du texte */
+    text-decoration: none; /* Enlève le soulignement */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transitions pour l'animation */
+}
+
+/* Effet au survol des boutons */
+.nav-button:hover {
+    background-color: #ffffff; /* Changement de couleur de fond au survol */
+    color: #bb86fc; /* Changement de couleur du texte au survol */
+    transform: scale(1.1); /* Légère augmentation de taille au survol */
+}
+
+/* Styles pour le contenu principal */
+main {
+    padding: 20px; /* Espacement autour du contenu principal */
+}
+
+/* Section d'introduction */
+.bienvenue {
+    margin: 40px; /* Marge autour de la section */
+}
+
+.bienvenue-box {
+    background-color: #1e1e1e; /* Fond plus sombre pour la box */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 20px; /* Espacement intérieur */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Ombre portée */
+}
+
+.highlight {
+    color: #bb86fc; /* Couleur pour les mots importants */
+    font-weight: bold; /* Mettre en gras */
+}
+
+/* Barre de séparation avec effet lumineux */
+.separator {
+    border: none; /* Enlève la bordure par défaut */
+    height: 2px; /* Hauteur de la barre */
+    background-color: #bb86fc; /* Couleur de base de la barre */
+    margin: 40px 0; /* Espacement autour de la barre */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 0 20px rgba(187, 134, 252, 0.5); /* Ombre portée */
+    animation: glow 1.5s infinite alternate; /* Animation lumineuse */
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 20px rgba(187, 134, 252, 0.5); /* Ombre au départ */
+    }
+    100% {
+        box-shadow: 0 0 40px rgba(187, 134, 252, 1); /* Ombre intensifiée */
+    }
+}
+
+/* Section des compétences */
+.language-list {
+    display: flex; /* Utilisation de Flexbox */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+    justify-content: space-between; /* Espacement entre les éléments */
+    list-style-type: none; /* Enlever les puces par défaut */
+    padding: 0;
+}
+
+.language-list li {
+    background-color: #2f2f2f; /* Fond sombre pour les éléments */
+    margin: 10px; /* Espace uniforme entre les éléments */
+    padding: 15px; /* Espace intérieur */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s; /* Transition au survol */
+    flex: 1 1 calc(30% - 20px); /* 3 éléments sur une ligne avec écart */
+    text-align: center; /* Centre le texte */
+    font-size: 1em; /* Taille de la police */
+}
+
+/* Ajustement de la couleur au survol */
+.language-list li:hover {
+    background-color: #bb86fc; /* Changement de couleur au survol */
+}
+
+/* Section des compétences */
+.contact-box {
+    background-color: #1e1e1e; /* Fond sombre pour la boîte */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 20px; /* Espacement intérieur */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Ombre portée */
+    margin: 20px; /* Marge autour de la boîte */
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column; /* Empile les éléments verticalement */
+}
+
+.info-item {
+    display: flex; /* Flexbox pour aligner point et texte */
+    align-items: center; /* Aligne verticalement au centre */
+    margin-bottom: 5px; /* Réduit l'espace entre les compétences */
+}
+
+.point {
+    display: inline-block; /* Pour permettre le positionnement */
+    width: 10px; /* Taille du point */
+    height: 10px; /* Taille du point */
+    border-radius: 50%; /* Coins arrondis pour un effet circulaire */
+    background-color: #bb86fc; /* Couleur du point */
+    margin-right: 15px; /* Augmenter l'espace entre le point et le texte */
+}
+
+/* Section des projets */
+.projets-preview {
+    margin-top: 40px; /* Espacement entre les sections */
+}
+
+.project-grid {
+    display: flex; /* Utilisation de Flexbox */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+    justify-content: space-between; /* Espacement entre les projets */
+    gap: 15px; /* Espace entre les cartes */
+}
+
+.project-card {
+    background-color: #3a3a3a; /* Fond légèrement plus clair */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Ombre portée */
+    margin: 15px; /* Espace autour de chaque carte */
+    padding: 20px; /* Espacement intérieur */
+    flex: 1 1 calc(30% - 20px); /* Ajuster la taille des cartes pour 3 sur 1 ligne */
+    text-align: center; /* Centre le texte */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition pour l'animation */
+}
+
+/* Effet au survol des cartes de projet */
+.project-card:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Ombre plus marquée au survol */
+}
+
+.project-card img {
+    max-width: 100%; /* S'assurer que l'image ne déborde pas */
+    height: auto; /* Garde les proportions */
+    border-radius: 10px; /* Coins arrondis pour l'image du projet */
+    margin-bottom: 10px; /* Espacement sous l'image */
+}
+
+.project-card h4 {
+    color: #bb86fc; /* Couleur du titre */
+    margin: 10px 0; /* Espacement autour du titre */
+    transition: color 0.3s ease; /* Transition pour un changement de couleur */
+}
+
+/* Changer la couleur du titre au survol */
+.project-card:hover h4 {
+    color: #ffffff; /* Changer la couleur au survol */
+}
+
+.project-card p {
+    color: #e0e0e0; /* Couleur du texte de description */
+}
+
+/* Pied de page */
+footer {
+    text-align: center; /* Centre le texte du pied de page */
+    padding: 20px; /* Espacement intérieur */
+    background-color: #1e1e1e; /* Fond du pied de page */
+    position: relative; /* Position relative pour un meilleur placement */
+    bottom: 0; /* Aligne en bas de la page */
+    width: 100%; /* Largeur complète */
+}
+
+/* Styles pour les titres de sections */
+h1, h2 {
+    color: #bb86fc; /* Couleur des titres de section */
+    margin: 20px 0; /* Espacement autour des titres */
+    padding-bottom: 5px; /* Espacement sous le titre */
+    text-decoration: none; /* Enlève le soulignement */
+    margin-left: 20px; /* Augmenter la marge à gauche */
+}
+
+/* Media Queries pour Responsive Design */
+@media (max-width: 768px) {
+    .project-card, .language-list li {
+        flex: 1 1 calc(100% - 20px); /* 1 élément sur une ligne */
+    }
+
+    .header-container {
+        flex-direction: column; /* Changer l'orientation en colonne sur petits écrans */
+        align-items: flex-start; /* Alignement à gauche */
+    }
+
+    nav ul {
+        flex-direction: column; /* Empiler les liens verticalement sur petits écrans */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Espacement vertical entre les liens */
+    }
+}
+
+/* Styles pour les icônes de contact */
+.info-icon {
+    width: 40px; /* Taille de l'icône */
+    height: 40px; /* Taille de l'icône */
+    margin-right: 15px; /* Espacement à droite des icônes */
+    vertical-align: middle; /* Aligne les icônes avec le texte */
+    border: 2px solid #bb86fc; /* Contour coloré */
+    border-radius: 50%; /* Coins arrondis pour un effet circulaire */
+    padding: 5px; /* Espacement intérieur pour créer un effet de contour */
+    background-color: #2f2f2f; /* Fond derrière l'icône */
+    transition: transform 0.3s; /* Transition pour l'animation */
+}
+
+/* Effet au survol des icônes */
+.info-icon:hover {
+    transform: scale(1.1); /* Légère augmentation de taille au survol */
+}
+
+.email-link {
+    color: #bb86fc; /* Couleur violette */
+    text-decoration: none; /* Pas de soulignement */
+}
+
+/* Effet au survol de l'email */
+.email-link:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+.arrow {
+    color: #bb86fc; /* Couleur de la flèche */
+    margin-right: 10px; /* Espace entre la flèche et le texte */
+    font-size: 1.2em; /* Taille de la flèche */
+    vertical-align: middle; /* Aligne la flèche avec le texte */
+}
+
+.fade {
+    opacity: 0; /* Rendre le contenu invisible */
+    transition: opacity 0.5s ease; /* Durée de la transition */
+}
+
+.hidden {
+    display: none; /* Cacher complètement le contenu */
+}
+
+.button-container {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+.nav-button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #635b68; /* Couleur de fond */
+    color: #000000; /* Couleur du texte */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #bbbabb; /* Couleur de fond au survol */
+}
