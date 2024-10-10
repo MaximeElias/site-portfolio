@@ -140,18 +140,9 @@ main {
 }
 
 .info-item {
-    display: flex; /* Flexbox pour aligner point et texte */
+    display: block; /* Flexbox pour aligner point et texte */
     align-items: center; /* Aligne verticalement au centre */
     margin-bottom: 5px; /* Réduit l'espace entre les compétences */
-}
-
-.point {
-    display: inline-block; /* Pour permettre le positionnement */
-    width: 10px; /* Taille du point */
-    height: 10px; /* Taille du point */
-    border-radius: 50%; /* Coins arrondis pour un effet circulaire */
-    background-color: #bb86fc; /* Couleur du point */
-    margin-right: 15px; /* Augmenter l'espace entre le point et le texte */
 }
 
 /* Section des projets */
@@ -370,42 +361,6 @@ nav {
     z-index: 1000; /* Assure que le menu est au-dessus d'autres éléments */
 }
 
-@media (max-width: 768px) {
-    .hamburger {
-        display: block; /* Afficher le bouton hamburger sur petits écrans */
-    }
-
-    nav ul {
-        display: none; /* Cacher la liste de navigation par défaut */
-        flex-direction: column; /* Alignement vertical */
-        position: absolute; /* Positionner le menu en absolu */
-        top: 50px; /* Ajuste selon la hauteur de l'en-tête */
-        right: 0; /* Alignement à droite */
-        background-color: #1e1e1e; /* Couleur de fond sombre */
-        width: 100%; /* Prend toute la largeur */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre pour le menu */
-    }
-    
-    #nav-list {
-        display: none; /* Cacher la liste de navigation par défaut */
-        flex-direction: column; /* Alignement vertical */
-        position: absolute; /* Positionner le menu en absolu */
-        top: 50px; /* Ajuste selon la hauteur de l'en-tête */
-        right: 0; /* Alignement à droite */
-        background-color: white; /* Couleur de fond */
-        width: 100%; /* Prend toute la largeur */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre pour le menu */
-    }
-
-    #nav-list.show {
-        display: flex; /* Afficher la liste quand elle est active */
-    }
-
-    .nav-button {
-        padding: 15px; /* Espacement pour chaque bouton */
-    }
-}
-
 /* Hamburger icon */
 .hamburger {
     display: none; /* Cacher par défaut */
@@ -415,17 +370,21 @@ nav {
     color: #bb86fc; /* Couleur pour le hamburger */
 }
 
-/* Styles pour la liste de navigation */
+/* Styles pour la liste de navigation par défaut */
 #nav-list {
     display: flex; /* Affichage en ligne par défaut */
     margin-left: auto; /* Espace entre le hamburger et la liste */
 }
 
+/* Styles pour les petits écrans */
 @media (max-width: 768px) {
+
+    /* Afficher le bouton hamburger */
     .hamburger {
         display: block; /* Afficher le bouton hamburger sur petits écrans */
     }
 
+    /* Cacher la liste de navigation par défaut sur petits écrans */
     #nav-list {
         display: none; /* Cacher la liste de navigation par défaut */
         flex-direction: column; /* Alignement vertical */
@@ -439,12 +398,58 @@ nav {
         border-radius: 5px; /* Coins arrondis */
     }
 
+    /* Afficher la liste de navigation quand elle est active */
     #nav-list.show {
         display: flex; /* Afficher la liste quand elle est active */
     }
 
+    /* Styles des boutons de navigation */
     .nav-button {
         padding: 15px; /* Espacement pour chaque bouton */
         color: #ffffff; /* Couleur du texte */
+        text-align: center; /* Aligner le texte au centre */
+        display: block; /* Affichage en bloc pour toute la largeur */
     }
+}
+
+#language-buttons {
+    text-align: center; /* Centre le texte et les éléments à l'intérieur */
+    margin: 40px 0; /* Espace autour de la section */
+}
+
+.button-container {
+    display: flex; /* Utilise Flexbox pour aligner les boutons */
+    justify-content: center; /* Centre les boutons horizontalement */
+    flex-wrap: wrap; /* Permet aux boutons de passer à la ligne si nécessaire */
+}
+
+.nav-button {
+    background-color: #bb86fc; /* Couleur de fond */
+    color: #ffffff; /* Couleur du texte */
+    padding: 15px 20px; /* Espacement intérieur */
+    margin: 10px; /* Espacement autour des boutons */
+    border-radius: 5px; /* Coins arrondis */
+    text-decoration: none; /* Supprime le soulignement */
+    transition: background-color 0.3s; /* Transition pour l'effet hover */
+    font-weight: 500; /* Met en gras le texte */
+}
+
+.nav-button:hover {
+    background-color: #9a57d9; /* Couleur au survol */
+}
+
+.logo-projet {
+    width: 20rem;
+}
+
+.hyperlien {
+    color: #9a57d9;
+}
+
+.project-image {
+    border-radius: 1rem;
+}
+
+.project-image:hover {
+    
 }
