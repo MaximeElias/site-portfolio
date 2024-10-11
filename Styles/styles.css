@@ -139,8 +139,14 @@ main {
     flex-direction: column; /* Empile les éléments verticalement */
 }
 
-.info-item {
+.projet-item {
     display: block; /* Flexbox pour aligner point et texte */
+    align-items: center; /* Aligne verticalement au centre */
+    margin-bottom: 5px; /* Réduit l'espace entre les compétences */
+}
+
+.info-item {
+    display: flex; /* Flexbox pour aligner point et texte */
     align-items: center; /* Aligne verticalement au centre */
     margin-bottom: 5px; /* Réduit l'espace entre les compétences */
 }
