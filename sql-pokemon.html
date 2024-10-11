@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Projet SQL - Pokédex</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Projets</h1>
+            <nav>
+                <div class="header-container">
+                    <div class="hamburger" onclick="toggleMenu()">☰</div> <!-- Icône hamburger -->
+                    <ul id="nav-list">
+                        <li><a href="index.html" class="nav-button">Accueil</a></li>
+                        <li><a href="projets.html" class="nav-button">Projets</a></li>
+                        <li><a href="contact.html" class="nav-button">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>           
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Explication du Projet</h2>
+            <p>Ce projet consiste en la création d'une base de données SQL pour les <strong>151 premiers Pokémon</strong> issus des jeux Pokémon Rouge et Bleu. L'objectif est de modéliser les relations entre les Pokémon, leurs types, évolutions, et statistiques, en utilisant SQL pour effectuer des requêtes complexes et manipuler les données efficacement.</p>
+            <a href="https://github.com/MaximeElias/programmes-sql/blob/main/sql-pokemon.sql" class="hyperlien">Voir le code source</a>
+            <br>
+            <br>
+            <img src="images/pokedex-sql-1.png" alt="Modèle de la base de données Pokémon" class="project-image">
+            <hr class="separator">
+        </section>
+
+        <section>
+            <h2>Améliorations à Venir</h2>
+            <p>Pour rendre la base de données plus complète, je prévois d'ajouter des fonctionnalités supplémentaires comme la gestion des capacités et des objets, ainsi que des requêtes pour filtrer les Pokémon par type, puissance, ou génération. Je compte aussi optimiser les requêtes pour des performances accrues lors des recherches dans de grands ensembles de données.</p>
+            <img src="images/pokedex-sql-2.png" alt="Exemple de requête SQL pour Pokémon" class="project-image">
+            <hr class="separator">
+        </section>                
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>Ce projet m'a permis de perfectionner mes compétences en SQL et en gestion de bases de données. Grâce à ce mini-projet, j'ai pu comprendre les concepts de modélisation relationnelle, de normalisation des tables, et de manipulation de données. Il s'agit d'une première étape dans la création d'un Pokédex interactif avec des données enrichies sur chaque Pokémon.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Portfolio de Maxime</p>
+    </footer>
+
+    <script src="Scripts/main.js"></script>
+</body>
+</html>
